@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class VoxelData
 {
-    int[,,] data = new int[,,] {
-        { { 0, 1, 1 }, { 1, 1, 1 }, { 1, 1, 0 } },
-        { { 0, 0, 0 }, { 1, 0, 0 }, { 1, 0, 0 } },
-        { { 0, 1, 0 }, { 1, 0, 1 }, { 0, 1, 0 } }
-    };
+    int[,,] data = new int[10,10,10];
+
+    public void ChangeData(int x, int y, int z, int change)
+    {
+        data[x, y, z] = change;
+    }
 
     public int Width
     {

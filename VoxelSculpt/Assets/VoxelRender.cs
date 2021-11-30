@@ -10,6 +10,7 @@ public class VoxelRender : MonoBehaviour
     Mesh mesh;
     List<Vector3> vertices;
     List<int> triangles;
+    VoxelDataHandler voxelDataHandler;
 
     public float scale = 1f;
 
@@ -23,7 +24,15 @@ public class VoxelRender : MonoBehaviour
 
     void Start()
     {
-        GenerateVoxelMesh(new VoxelData());
+        voxelDataHandler = new VoxelDataHandler(adjScale);
+        GenerateVoxelMesh(voxelDataHandler.data);
+        UpdateMesh();
+    }
+
+    void Update()
+    {
+        voxelDataHandler.Update();
+        GenerateVoxelMesh(voxelDataHandler.data);
         UpdateMesh();
     }
 
