@@ -10,3 +10,6 @@
  
  Extra features to take the project to another level:
  - Implement own rendering engine - use path / ray tracing and voxel - based optimizations
+ 
+ Resources:
+ - http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.42.3443&rep=rep1&type=pdf
